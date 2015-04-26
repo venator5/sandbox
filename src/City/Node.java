@@ -5,12 +5,6 @@
  */
 package City;
 
-import static City.City.lherb;
-import static City.City.mapsizex;
-import static City.City.mapsizey;
-import static City.Route.nodes;
-import static City.Route.steps;
-
 /**
  *
  * @author The Venator
@@ -25,10 +19,5 @@ public class Node  {
 			this.y = y;
 		}         
       
-        public void walk(int n){
-         Node cheese = (Node) steps.get(0);
-         lherb.get(n).cx =cheese.x;
-                 lherb.get(n).cy = cheese.y;
-        
-        }
+      
 }

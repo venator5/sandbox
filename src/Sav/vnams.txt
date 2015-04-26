@@ -1,0 +1,21 @@
+Age of Death
+Food decay
+grp form size
+Breed time M
+Water decay
+grp frd lvl
+Breed time f
+Food check
+food regen
+Dex drift
+Water check
+water regen
+Str Drift
+Starvation
+rel nongrp
+HP Drift
+HP restore
+rel group
+Ran walk dis
+Critical inj
+comp rel

@@ -1,0 +1,176 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:62), pid=26712, tid=28208
+#
+# JRE version:  (8.0_05-b13) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.5-b02 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000000002790800):  JavaThread "Unknown thread" [_thread_in_vm, id=28208, stack(0x00000000025e0000,0x00000000026e0000)]
+
+Stack: [0x00000000025e0000,0x00000000026e0000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x308dea]
+V  [jvm.dll+0x25def1]
+V  [jvm.dll+0x25eb0f]
+V  [jvm.dll+0x2564e5]
+V  [jvm.dll+0x37eb4f]
+V  [jvm.dll+0x3c70d2]
+V  [jvm.dll+0x3c745a]
+V  [jvm.dll+0x3c29f7]
+V  [jvm.dll+0xe2142]
+V  [jvm.dll+0x1f1419]
+V  [jvm.dll+0x2227c4]
+V  [jvm.dll+0x149f71]
+C  [java.exe+0x207a]
+C  [java.exe+0xc99b]
+C  [java.exe+0xca2f]
+C  [KERNEL32.DLL+0x16ad]
+C  [ntdll.dll+0x6e954]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x0000000002790800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=28208, stack(0x00000000025e0000,0x00000000026e0000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 1024K, used 20K [0x00000000d5f00000, 0x00000000d6080000, 0x0000000100000000)
+  eden space 512K, 4% used [0x00000000d5f00000,0x00000000d5f05288,0x00000000d5f80000)
+  from space 512K, 0% used [0x00000000d6000000,0x00000000d6000000,0x00000000d6080000)
+  to   space 512K, 0% used [0x00000000d5f80000,0x00000000d5f80000,0x00000000d6000000)
+ ParOldGen       total 129536K, used 0K [0x0000000081c00000, 0x0000000089a80000, 0x00000000d5f00000)
+  object space 129536K, 0% used [0x0000000081c00000,0x0000000081c00000,0x0000000089a80000)
+ Metaspace       used 673K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 66K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000011c50000,0x0000000012050000] byte_map_base: 0x0000000011842000
+
+Marking Bits: (ParMarkBitMap*) 0x0000000075e213b0
+ Begin Bits: [0x0000000012b00000, 0x0000000014a90000)
+ End Bits:   [0x0000000014a90000, 0x0000000016a20000)
+
+Polling page: 0x0000000000c90000
+
+CodeCache: size=245760Kb used=327Kb max_used=327Kb free=245432Kb
+ bounds [0x0000000002890000, 0x0000000002b00000, 0x0000000011890000]
+ total_blobs=56 nmethods=0 adapters=37
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.019 loading class java/lang/Short
+Event: 0.019 loading class java/lang/Short done
+Event: 0.019 loading class java/lang/Integer
+Event: 0.019 loading class java/lang/Integer done
+Event: 0.019 loading class java/lang/Long
+Event: 0.019 loading class java/lang/Long done
+Event: 0.019 loading class java/lang/NullPointerException
+Event: 0.019 loading class java/lang/NullPointerException done
+Event: 0.019 loading class java/lang/ArithmeticException
+Event: 0.019 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x00007ff61b730000 - 0x00007ff61b764000 	C:\Program Files\Java\jdk1.8.0_05\bin\java.exe
+0x00007ffb518f0000 - 0x00007ffb51a9c000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ffb51190000 - 0x00007ffb512ca000 	C:\Windows\system32\KERNEL32.DLL
+0x00007ffb4ecb0000 - 0x00007ffb4edbf000 	C:\Windows\system32\KERNELBASE.dll
+0x00007ffb4d740000 - 0x00007ffb4d7c8000 	C:\Windows\system32\apphelp.dll
+0x00007ffb3b390000 - 0x00007ffb3b3df000 	C:\Windows\AppPatch\AppPatch64\AcGenral.DLL
+0x00007ffb51010000 - 0x00007ffb510b7000 	C:\Windows\system32\msvcrt.dll
+0x00007ffb4e910000 - 0x00007ffb4e93b000 	C:\Windows\SYSTEM32\SspiCli.dll
+0x00007ffb4f1d0000 - 0x00007ffb4f221000 	C:\Windows\system32\SHLWAPI.dll
+0x00007ffb4f970000 - 0x00007ffb4fae1000 	C:\Windows\system32\USER32.dll
+0x00007ffb51390000 - 0x00007ffb51508000 	C:\Windows\system32\ole32.dll
+0x00007ffb4faf0000 - 0x00007ffb51008000 	C:\Windows\system32\SHELL32.dll
+0x00007ffb4e120000 - 0x00007ffb4e13e000 	C:\Windows\SYSTEM32\USERENV.dll
+0x00007ffb4f120000 - 0x00007ffb4f1c5000 	C:\Windows\system32\ADVAPI32.dll
+0x00007ffb40bf0000 - 0x00007ffb40c0b000 	C:\Windows\SYSTEM32\MPR.dll
+0x00007ffb517b0000 - 0x00007ffb518e7000 	C:\Windows\system32\RPCRT4.dll
+0x00007ffb51750000 - 0x00007ffb517a7000 	C:\Windows\SYSTEM32\sechost.dll
+0x00007ffb4f770000 - 0x00007ffb4f946000 	C:\Windows\SYSTEM32\combase.dll
+0x00007ffb4f620000 - 0x00007ffb4f764000 	C:\Windows\system32\GDI32.dll
+0x00007ffb4eb30000 - 0x00007ffb4eb44000 	C:\Windows\SYSTEM32\profapi.dll
+0x00007ffb4d0f0000 - 0x00007ffb4d1a2000 	C:\Windows\SYSTEM32\SHCORE.dll
+0x00007ffb4f0e0000 - 0x00007ffb4f114000 	C:\Windows\system32\IMM32.DLL
+0x00007ffb4f4c0000 - 0x00007ffb4f611000 	C:\Windows\system32\MSCTF.dll
+0x00007ffb4c8e0000 - 0x00007ffb4cb3a000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.9600.17031_none_6242a4b3ecbb55a1\COMCTL32.dll
+0x0000000075590000 - 0x0000000075662000 	C:\Program Files\Java\jdk1.8.0_05\jre\bin\msvcr100.dll
+0x0000000075670000 - 0x0000000075e9a000 	C:\Program Files\Java\jdk1.8.0_05\jre\bin\server\jvm.dll
+0x00007ffb4ac80000 - 0x00007ffb4ac89000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ffb4afd0000 - 0x00007ffb4afef000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ffb51510000 - 0x00007ffb51517000 	C:\Windows\system32\PSAPI.DLL
+0x00007ffb51330000 - 0x00007ffb51388000 	C:\Windows\system32\WS2_32.dll
+0x00007ffb4af90000 - 0x00007ffb4afba000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x00007ffb51590000 - 0x00007ffb51599000 	C:\Windows\system32\NSI.dll
+0x00007ffb4efa0000 - 0x00007ffb4efea000 	C:\Windows\SYSTEM32\cfgmgr32.dll
+0x00007ffb4d9c0000 - 0x00007ffb4d9e6000 	C:\Windows\SYSTEM32\DEVOBJ.dll
+0x0000000075540000 - 0x000000007554f000 	C:\Program Files\Java\jdk1.8.0_05\jre\bin\verify.dll
+0x0000000075510000 - 0x0000000075538000 	C:\Program Files\Java\jdk1.8.0_05\jre\bin\java.dll
+0x00000000754f0000 - 0x0000000075506000 	C:\Program Files\Java\jdk1.8.0_05\jre\bin\zip.dll
+0x00007ffb453b0000 - 0x00007ffb45538000 	C:\Windows\SYSTEM32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -Dfile.encoding=UTF-8 
+java_command: City.City
+java_class_path (initial): C:\Users\The Venator\Documents\NetBeansProjects\liife\build\classes
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+PATH=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\GNU\GnuPG\pub;C:\Program Files\TortoiseSVN\bin
+USERNAME=The Venator
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 42 Stepping 7, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 8.1 , 64 bit Build 9600 
+
+CPU:total 8 (4 cores per cpu, 2 threads per core) family 6 model 42 stepping 7, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, aes, clmul, ht, tsc, tscinvbit
+
+Memory: 4k page, physical 8268928k(1489600k free), swap 9614764k(5716k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.5-b02) for windows-amd64 JRE (1.8.0_05-b13), built on Mar 18 2014 01:08:39 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Tue Mar 31 16:50:10 2015
+elapsed time: 0 seconds
+

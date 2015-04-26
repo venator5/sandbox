@@ -6,7 +6,6 @@
 package City;
 
 
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
@@ -28,8 +27,9 @@ public class Block extends Rectangle {
     /*draws tiles and grid*/
 
     public void draw(Graphics g) {
+
         g.drawImage(Screen.mimg[id], x, y, Map.Bsize, Map.Bsize, null);
-      
+        
     }
 
 }
